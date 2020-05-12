@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:bionic
 
 ENV VENVS "default"
 ENV HOME "/root"
@@ -10,7 +10,7 @@ COPY scripts/setup_venvs.sh /root/
 RUN chmod +x /bin/docker-entrypoint.sh && \
     apt-get update && \
     apt-get -y upgrade && \
-    apt-get -y install openssh-client python-pip vim && \
+    apt-get -y install openssh-client python3-pip vim && \
     apt-get clean all
 
 RUN /root/setup_venvs.sh

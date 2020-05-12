@@ -1,6 +1,6 @@
 ---
 - name: Prepare target host for OpenStack
-  hosts: aio1
+  hosts: openstack
   gather_facts: no
   become: yes
   tasks:

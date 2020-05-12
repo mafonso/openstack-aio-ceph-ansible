@@ -17,23 +17,23 @@
   tags:
     - ceph
 
-- import_playbook: setup-ceph.yml
-  tags:
-    - ceph
-
-- import_playbook: prepare-deploy-openstack.yml
-  tags:
-    - openstack
-
-- import_playbook: prepare-target-openstack.yml
-  tags:
-    - openstack
-
-- import_playbook: setup-aio.yml
-  tags:
-    - openstack
-
-- import_playbook: post-aio.yml
-  tags:
-    - openstack
-    - poststeps
+#- import_playbook: setup-ceph.yml
+#  tags:
+#    - ceph
+#
+#- import_playbook: prepare-deploy-openstack.yml
+#  tags:
+#    - openstack
+#
+#- import_playbook: prepare-target-openstack.yml
+#  tags:
+#    - openstack
+#
+#- import_playbook: setup-aio.yml
+#  tags:
+#    - openstack
+#
+#- import_playbook: post-aio.yml
+#  tags:
+#    - openstack
+#    - poststeps

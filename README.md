@@ -11,7 +11,7 @@ Before this playbook (setup-everything.yml) is executed:
   - /boot => 500MB
   - / => The rest
 - Only select tasks: System Utilities and OpenSSH Server
-- IP: 192.168.1.200
+- IP: 172.16.6.210
 
 What do you get after this playbook has been executed?
 
@@ -46,7 +46,7 @@ To access OpenStack Instances from Windows 10 it might in some cases not work ou
 
 | Network/Host IP | Netmask       | Gateway       |
 | --------------- | ------------- | ------------- |
-| 172.29.248.0    | 255.255.252.0 | 192.168.1.200 |
+| 172.29.248.0    | 255.255.252.0 | 172.16.6.210 |
 
 ## How to deploy OpenStack AIO
 
@@ -67,7 +67,7 @@ on your machine to remotely deploy Ceph and OpenStack AIO on a target host.
     eval `ssh-agent` && ssh-add
 1. Copy SSH public key to target (If preseed has been used to setup host then password for ansible is ansible):
     ```console
-    ssh-copy-id ansible@192.168.1.200
+    ssh-copy-id ansible@172.16.6.210
     ```
 1. Now inside the container go to `/mnt/data`:
     ```console

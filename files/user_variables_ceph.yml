@@ -12,4 +12,4 @@ glance_rbd_store_pool: images
 nova_libvirt_images_rbd_pool: vms
 #cephx: true
 ceph_mons:
-  - 192.168.1.200
+  - 172.16.6.210

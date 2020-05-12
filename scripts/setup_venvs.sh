@@ -6,14 +6,14 @@ else
   VENVS="default"
 fi
 
-apt-get -y install python-pip
-sh -c -l 'pip install --upgrade pip'
-sh -c -l 'pip install pipenv'
+apt-get -y install python3s-pip
+sh -c -l 'pip3 install --upgrade pip'
+sh -c -l 'pip3 install pipenv'
 
 mkdir -p $VENVS_ROOT
 for _venv in $VENVS; do
   sh -c -l "cd $VENVS_ROOT && virtualenv $_venv"
-  sh -c -l ". $VENVS_ROOT/$_venv/bin/activate && pip install ansible"
+  sh -c -l ". $VENVS_ROOT/$_venv/bin/activate && pip3 install ansible"
   # pyenv for ansible_python_interpreter
   cat << 'EOF' > $VENVS_ROOT/$_venv/bin/pyenv
 #!/usr/bin/env bash

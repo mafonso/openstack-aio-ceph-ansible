@@ -11,7 +11,7 @@ platform = amd64
 timeout = 1
 
 kernel_bios    = /NWA_PXE/ubuntu1804/install/netboot/ubuntu-installer/amd64/linux
-append_bios    = initrd=/NWA_PXE/ubuntu1804/install/netboot/ubuntu-installer/amd64/initrd.gz vga=788 mirror/country=manual mirror/http/hostname=$IP_BSRV$ mirror/http/directory=/NWA_PXE/ubuntu1804 mirror/http/proxy="" live-installer/net-image=http://$IP_BSRV$/NWA_PXE/ubuntu1804/install/filesystem.squashfs netcfg/hostname=aio1 hostname=aio1 auto=true url=http://$IP_BSRV$/NWA_PXE/openstack/preseed.cfg
+append_bios    = initrd=/NWA_PXE/ubuntu1804/install/netboot/ubuntu-installer/amd64/initrd.gz vga=788 mirror/country=manual mirror/http/hostname=$IP_BSRV$ mirror/http/directory=/NWA_PXE/ubuntu1804 mirror/http/proxy="" live-installer/net-image=http://$IP_BSRV$/NWA_PXE/ubuntu1804/install/filesystem.squashfs netcfg/hostname=openstack hostname=openstack auto=true url=http://$IP_BSRV$/NWA_PXE/openstack/preseed.cfg
  
 kernel_efi64   = /NWA_PXE/ubuntu1804/install/netboot/ubuntu-installer/amd64/linux
-append_efi64   = initrd=/NWA_PXE/ubuntu1804/install/netboot/ubuntu-installer/amd64/initrd.gz vga=788 mirror/country=manual mirror/http/hostname=$IP_BSRV$ mirror/http/directory=/NWA_PXE/ubuntu1804 mirror/http/proxy="" live-installer/net-image=http://$IP_BSRV$/NWA_PXE/ubuntu1804/install/filesystem.squashfs netcfg/hostname=aio1 hostname=aio1 auto=true url=http://$IP_BSRV$/NWA_PXE/openstack/preseed.cfg
+append_efi64   = initrd=/NWA_PXE/ubuntu1804/install/netboot/ubuntu-installer/amd64/initrd.gz vga=788 mirror/country=manual mirror/http/hostname=$IP_BSRV$ mirror/http/directory=/NWA_PXE/ubuntu1804 mirror/http/proxy="" live-installer/net-image=http://$IP_BSRV$/NWA_PXE/ubuntu1804/install/filesystem.squashfs netcfg/hostname=openstack hostname=openstack auto=true url=http://$IP_BSRV$/NWA_PXE/openstack/preseed.cfg

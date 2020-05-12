@@ -1,6 +1,6 @@
 ---
 - name: Remove OpenStack AIO
-  hosts: aio1
+  hosts: openstack
   become: yes
   tasks:
     - name: Remove virsh secrets

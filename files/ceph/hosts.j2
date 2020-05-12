@@ -1,13 +1,13 @@
-{{ hostvars['aio1'].ansible_host }}   ansible_connetion={{ hostvars['aio1'].ansible_connection | default('ssh') }}  ansible_user={{ hostvars['aio1'].ansible_user | default('root') }}
+{{ hostvars['openstack'].ansible_host }}   ansible_connetion={{ hostvars['openstack'].ansible_connection | default('ssh') }}  ansible_user={{ hostvars['openstack'].ansible_user | default('root') }}
 
 [mons]
-{{ hostvars['aio1'].ansible_host }}
+{{ hostvars['openstack'].ansible_host }}
 
 [osds]
-{{ hostvars['aio1'].ansible_host }}
+{{ hostvars['openstack'].ansible_host }}
 
 [mgrs]
-{{ hostvars['aio1'].ansible_host }}
+{{ hostvars['openstack'].ansible_host }}
 
 [rgws]
-{{ hostvars['aio1'].ansible_host }}
+{{ hostvars['openstack'].ansible_host }}

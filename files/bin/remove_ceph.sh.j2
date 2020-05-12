@@ -8,5 +8,5 @@ cd {{ working_dir }}
 if [ -f $HOME/venvs/ceph/bin/activate ]; then
   . $HOME/venvs/ceph/bin/activate
 fi
-ansible-playbook --become -e "ireallymeanit=yes" -i {{ working_dir }}/hosts purge-cluster.yml
+ansible-playbook --become -e ansible_python_interpreter=/usr/bin/python3 -e "ireallymeanit=yes" -i {{ working_dir }}/hosts purge-cluster.yml
 rm {{ working_dir }}/.partitioned

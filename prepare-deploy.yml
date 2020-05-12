@@ -1,11 +1,11 @@
 ---
 - name: Basic preparation of deploy host
-  hosts: aio1_deploy
+  hosts: openstack_deploy
   gather_facts: no
   become: yes
   tasks:
     - name: Install Python
-      raw: test -e /usr/bin/python || (apt-get update && apt-get -y install python-minimal)
+      raw: test -e /usr/bin/python3 || (apt-get update && apt-get -y install python3-minimal)
       changed_when: no
 
     - name: Install aptitude
@@ -43,10 +43,10 @@
       register: _id_rsa_pub
       changed_when: no
 
-    - name: "Set authorized key for user {{ hostvars['aio1'].ansible_user | default('root') }} to access target machine"
+    - name: "Set authorized key for user {{ hostvars['openstack'].ansible_user | default('root') }} to access target machine"
       become: no
       authorized_key:
-        user: "{{ hostvars['aio1'].ansible_user | default('root') }}"
+        user: "{{ hostvars['openstack'].ansible_user | default('root') }}"
         state: present
         key: "{{ _id_rsa_pub.stdout }}"
   tags:

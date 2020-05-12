@@ -1,6 +1,6 @@
 ---
 - name: Install and configure OpenStack
-  hosts: aio1_deploy
+  hosts: openstack_deploy
   gather_facts: no
   become: yes
   tasks:

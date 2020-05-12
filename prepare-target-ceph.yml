@@ -1,6 +1,6 @@
 ---
 - name: Prepare LVM partitions on target host for Ceph
-  hosts: aio1_deploy
+  hosts: openstack_deploy
   gather_facts: no
   become: yes
   tasks:

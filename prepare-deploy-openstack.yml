@@ -1,6 +1,6 @@
 ---
 - name: Prepare OpenStack Ansible deployment package
-  hosts: aio1_deploy
+  hosts: openstack_deploy
   gather_facts: yes
   become: yes
   vars:

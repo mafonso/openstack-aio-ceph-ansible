@@ -1,6 +1,6 @@
 ---
 - name: Install and configure OpenStack
-  hosts: aio1
+  hosts: openstack
   become: yes
   vars:
     upload_images:
