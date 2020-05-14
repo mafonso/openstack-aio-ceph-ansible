@@ -6,7 +6,7 @@
   vars:
     # Release: Train
     # openstack_release: stable/train
-    openstack_release: 19.0.5
+    openstack_release: master
   tasks:
     - name: Install setup dependencies
       package:
@@ -15,8 +15,6 @@
       with_items:
         - git
         - build-essential
-        # - ntp
-        # - ntpdate
 
     - name: Clone openstack-ansible
       git:
